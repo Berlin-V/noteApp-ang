@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<div class="split left">
+<div class="div-ne">
+    <video autoplay loop muted>
+        <source src="../assets/wave.mp4" type="video/mp4">
+    </video>
+    <img src="../assets/note-log.png" alt="surfboard notes">
+</div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+	     <div class= "text">
+		     <b>Welcome Back!</b>
+	     </div>
+	     <div class="gap">
+	     <label>user ID :</label>
+	     <input type="text" placeholder ="Enter the user ID" [formControl]="user"/> 
+	     </div>
+	     <div class="gap">
+	     <label>password:</label>
+	     <input type="password" placeholder="Enter the Password" [formControl]="Password"/><br><br>
+<input type="checkbox" onclick="myFunction()">Show Password
+	     </div>
+	     <div class="gap">
+		     <a routerLink = "/home" > <button (click)="signIn">Sign In</button></a>
+	     <button type="submit">Sign Up </button>
+	     </div>
+  </div>
+</div>
+     
+</body>
+</html>
+	
