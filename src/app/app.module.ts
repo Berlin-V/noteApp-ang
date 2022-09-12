@@ -7,6 +7,7 @@ import { FirstPComponent } from './first-p/first-p.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
+import { SavedNotesComponent } from './saved-notes/saved-notes.component';
 
 const routes: Routes = [
 
@@ -16,7 +17,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     FirstPComponent,
-    HomeComponent
+    HomeComponent,
+    SavedNotesComponent
   ],
   imports: [
     BrowserModule,

@@ -8,26 +8,140 @@ box-sizing:border-box;
 display:flex;
 height:100vh;
 width:100vw;
-gap:10
+overflow:hidden;
+gap:1.5rem;
 }
 
 .menu{
- background-color :#0E44E1;
- width:20vw;
- margin-top:15px;
- margin-bottom: 25px;
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 23%, rgba(0,212,255,1) 100%);
+ 
+	width:20vw;
  border-radius:20px;
+ display:flex;
+ height:100%;
+padding:2rem 1rem;
+gap:2rem;
 }
 
-.write{
-background-color : white
-}
 
 .logo{
-width:"153.18px";
-height:"151px";
+height: 65px;
+width: auto;
 }
 
+.logo_container{
+width:100%;
+}
 
+.logo_style{
+display:flex;
+justify-content:center;
+align-items:center;
+}
 
+.logo_text{
+	color:white;
+	font-size:1.3rem;
+}
 
+.button{
+display:flex;
+flex-direction:column;
+padding:0.5rem 0.5rem;
+margin-top:3rem;
+gap:1rem;
+}
+
+.button1 {
+  top:15%;
+  width:100%;
+  height:50px;
+  z-index: 2;
+  border-radius:20px;
+  color: black;
+}
+
+ .button2 {
+   top:21%;
+   width:100%;
+   height:50px;
+   z-index: 2;
+   border-radius:20px;
+   color: black;
+ }
+
+  .button3 {
+    top:27%;
+    width:100%;
+    height:50px;
+    z-index: 2;
+    border-radius:20px;
+    color: black;
+  }
+  .page{
+  position:relative;
+  }
+
+  .text-field {
+        position: relative;
+        margin: 10px 2.5px 20px 2.5px;
+    }
+
+input {
+	height:5vh;
+	width: 70vw;
+        display: inline-block;
+        border: thin solid #fafafa;
+        border-bottom: solid medium #999;
+        color: #444;
+        background-color: #fafafa;
+        padding: 10px 10px 10px 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        font-weight:bold;
+	font-size:20px; 
+}
+
+textarea{
+  height:85vh;
+  width:70vw;
+font-size:20px;
+}
+
+    
+
+    input:focus {
+            border: thin solid #32cd32;
+            border-bottom: solid medium #32cd32;
+            background-color:#fff;
+        }
+
+label {
+        color: #999;
+        position: absolute;
+        pointer-events: none;
+        left: 10px;
+        top: 10px;
+        transition: 0.2s;
+    }
+
+input:focus ~ label, input:valid ~ label {
+        top: -10px;
+        left: 15px;
+        font-size: small;
+        color: #0E44E1;
+        background-color:#fff;
+        padding:0 5px 0 5px;
+    }
+
+.summit{
+	height:40px;
+position:absolute;
+bottom:auto;
+right:0px;
+color:#0E44E1;
+}
+
+.scroll{
+overflow: scroll;
+}

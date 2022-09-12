@@ -1,0 +1,23 @@
+<div class="field">
+  <p class="control has-icons-left">
+    <input class="input" type="text" placeholder="search">
+    <span class="icon is-small is-left">
+      <i class="fas fa-lock"></i>
+    </span>
+  </p>
+</div>
+
+<div class="scroll">
+ <ul>
+      <li *ngFor="let saved of notes">
+<div class="savedNotes">
+	<div class="">
+		<h1 class="note-title">{{saved.title}}</h1>
+		<p class="note-text">{{saved.body}}</p>
+            <button class="note-btn">Delete Notes</button>
+	    <button class ="note-edit-btn">Edit Notes</button>
+	</div>	  
+</div>
+      </li>
+ </ul>
+</div>

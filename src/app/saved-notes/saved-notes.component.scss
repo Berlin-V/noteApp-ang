@@ -1,0 +1,44 @@
+.field{
+display:flex;
+flex-direction:column;
+max-width:500px;
+margin:auto;
+padding-top:50px;
+
+}
+
+
+.savedNotes{
+padding :1rem;
+background-color:#F6F4F4;
+border-radius:15px;;
+margin:1rem 0;
+height:16vh;
+width:70vw;
+overflow: scroll;
+}
+
+/**&:hover{
+cursor:pointer;
+box-shadow: 0px 0px 0px 4px rgba(black,.068)
+}**/
+
+.note-title{
+ font-size:1.6rem;
+}
+
+.note-text{
+font-size:1.4rem;
+}
+
+.note-btn{
+padding:5px;
+margin-top:5px;
+cursor:pointer;
+}
+
+.note-edit-btn{;
+padding:5px;
+margin-top:5px;
+cursor:pointer;
+}

@@ -2,17 +2,44 @@
 	<body>
 		<div class="parent">
 			<div class ="menu">
-				<div class = "">
+				<div class="logo_container">
+					<div class="logo_style">
 				<img  class = "logo" src="../assets/logo.png" alt="surfboard notes">
+				<p class="logo_text">Surfboard<br>Notes</p>
+					</div>
+				<div class="button">
+				<button (click)="newNote()" class=" button1">New Notes</button>
+	                        <button (click)="savedNote()" class=" button2">Saved Notes</button>
+				<button class=" button3">Private Notes</button>
 				</div>
-		    </div>
-			    <div class = "write">
-				    <p>sjkbdc</p>
-
+				</div>
 			    </div>
 
-		</div>
+			    <form  [formGroup]="profileForm">
+			    <div *ngIf="addNote"  class="page">
+<div class="text-field">
+                <input type="text" required #notes formControlName="title">
+                <label>Title</label>
+            </div>
 
+            <div class="text-field">
+		    <textarea #data formControlName="body"></textarea>               
+            </div>
+	    <div>
+
+	    </div>
+	    <div class="summit">
+		   <button (click)="saveData()" type="submit" form="nameform" value="Submit">Submit</button>
+	    </div>
+
+			    </div>
+			    </form>
+
+		
+		<div *ngIf="saveNote" class="scroll">
+	<app-saved-notes></app-saved-notes>
+		</div>
+		</div>
 
 	</body>
 	</html>
