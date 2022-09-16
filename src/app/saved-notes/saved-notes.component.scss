@@ -1,21 +1,15 @@
-.field{
-display:flex;
-flex-direction:column;
-max-width:500px;
-margin:auto;
-padding-top:50px;
-
+.field {
+  margin-left:25rem;
 }
 
-
-.savedNotes{
-padding :1rem;
-background-color:#F6F4F4;
-border-radius:15px;;
-margin:1rem 0;
-height:16vh;
-width:70vw;
-overflow: scroll;
+.savedNotes {
+  padding: 1rem;
+  background-color: #f6f4f4;
+  border-radius: 15px;
+  margin: 1rem 0;
+  height: 16vh;
+  width: 70vw;
+  overflow: scroll;
 }
 
 /**&:hover{
@@ -23,22 +17,59 @@ cursor:pointer;
 box-shadow: 0px 0px 0px 4px rgba(black,.068)
 }**/
 
-.note-title{
- font-size:1.6rem;
+.note-title {
+  font-size: 1.6rem;
 }
 
-.note-text{
-font-size:1.4rem;
+.note-text {
+  font-size: 1.4rem;
 }
 
-.note-btn{
-padding:5px;
-margin-top:5px;
-cursor:pointer;
+.note-btn {
+  position: absolute;
+  padding: 5px;
+  margin-top: 5px;
+  cursor: pointer;
 }
 
-.note-edit-btn{;
-padding:5px;
-margin-top:5px;
-cursor:pointer;
+.note-edit-btn {
+  position: absolute;
+  padding: 5px;
+  left: 10rem;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.cat {
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin-top: -8.3rem;
+  width: 8rem;
+  height: 2rem;
+  background-color: blue;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  position: absolute;
+  right: 80px;
+  margin-top: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.no-notes {
+  color: red;
+  position: absolute;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.scroll {
+  position: relative;
 }

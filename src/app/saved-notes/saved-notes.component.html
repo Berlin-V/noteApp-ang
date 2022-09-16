@@ -1,23 +1,30 @@
 <div class="field">
   <p class="control has-icons-left">
-    <input class="input" type="text" placeholder="search">
+    <input class="input" type="text" placeholder="search" 
+     [(ngModel)]="searchTerm" (input)="search(searchTerm)" />
     <span class="icon is-small is-left">
       <i class="fas fa-lock"></i>
     </span>
   </p>
 </div>
 
-<div class="scroll">
- <ul>
-      <li *ngFor="let saved of notes">
-<div class="savedNotes">
-	<div class="">
-		<h1 class="note-title">{{saved.title}}</h1>
-		<p class="note-text">{{saved.body}}</p>
-            <button class="note-btn">Delete Notes</button>
-	    <button class ="note-edit-btn">Edit Notes</button>
-	</div>	  
+<div *ngIf="notes.length ===0">
+  <p class="no-notes">*No Notes Found</p>
 </div>
-      </li>
- </ul>
+
+<div class="scroll" *ngIf="notes.length!==0">
+  <ul>
+     <li *ngFor="let saved of notes; index as i">
+      <div class="savedNotes">
+        <div class="">
+          <h1 class="note-title">{{saved.title}}</h1>
+          <p class="note-text">{{saved.body}}</p>
+          <button class="note-btn" (click)="deleteNote(i)">Delete Notes</button>
+          <button class="note-edit-btn">Edit Notes</button>
+          <div class="cat">{{saved.categries}}</div>
+          <div class="date">{{saved.time}}</div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>

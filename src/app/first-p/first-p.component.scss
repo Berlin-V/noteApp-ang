@@ -25,7 +25,9 @@ body {
 }
 
 .text{
-  color :  blue;
+margin-left: 1rem;
+margin-bottom:1rem;
+      	color :  blue;
   font-size: 30px;
   font-family: reem kufi;
 }
@@ -50,12 +52,13 @@ position: fixed;
 }
 
 .centered{
+    width:30rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     justify-items: center;
     position: absolute;
-    right: 50%;
+    right: 35%;
     bottom: 50%;
     transform: translate(50%, 50%);
     padding: 1rem;
@@ -76,4 +79,10 @@ top:36%;
 	padding:1rem;
 }
 
+.text-danger{
+color:red;;	
+margin-top: 3rem;
+    margin-left: 4rem;
+    position: absolute;
+}
 

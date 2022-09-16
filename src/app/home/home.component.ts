@@ -9,12 +9,13 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class HomeComponent implements OnInit {
  /**@ViewChild('notes') input:any;
  @ViewChild('data')val:any;**/
- 
-	addNote:boolean=true;
- saveNote:boolean=false;
+	addNote:boolean=false;
+ saveNote:boolean=true;
 
   profileForm:any;
   noteArr:any=[];
+  dateTime:any={}
+  cat:any={}
 
  constructor() { }
 
@@ -30,12 +31,24 @@ export class HomeComponent implements OnInit {
      //time:new Date().toTimeString().slice(0,8),
   });
   }
- saveData(){
+  update(event:any) {
+var select = document.getElementById('language');
+const value=event.target.value;
+this.cat.categries=value
+  }
+ 
+  saveData(){
 /**  localStorage.setItem("title", this.input.nativeElement.value);
  localStorage.setItem("data", this.val.nativeElement.value);**/
-	 
-    this.noteArr.push(this.profileForm.value)
-   console.log(this.noteArr);
+
+     const transformDate = new Date().toLocaleDateString() 
+    const timezone=new Date().toLocaleTimeString('IST', {hour: 'numeric', hour12: true, minute: 'numeric' });
+this.dateTime.time=(transformDate+' '+timezone);
+
+    const date={...this.profileForm.value,...this.dateTime,...this.cat}
+  this.noteArr.push(date)
+    console.log(this.noteArr);
+   this.profileForm.reset();
    console.log(this.profileForm.value);
 localStorage.setItem("noteArr", JSON.stringify(this.noteArr));	 
  }

@@ -8,6 +8,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { SavedNotesComponent } from './saved-notes/saved-notes.component';
+import { SearchFilterPipe } from './saved-notes/search-filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
 
@@ -18,12 +20,14 @@ const routes: Routes = [
     AppComponent,
     FirstPComponent,
     HomeComponent,
-    SavedNotesComponent
+    SavedNotesComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
