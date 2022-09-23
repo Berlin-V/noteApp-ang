@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-
+import { NoteAppService } from './../note-app.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   dateTime:any={}
   cat:any={}
 
- constructor() { }
+ constructor(private noteAppService:NoteAppService) { }
 
   ngOnInit(): void {
 	  this.initialiseForm();
