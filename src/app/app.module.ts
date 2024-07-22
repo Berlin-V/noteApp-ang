@@ -13,9 +13,7 @@ import { SearchFilterPipe } from './saved-notes/search-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up/sign-up.component';
 
-const routes: Routes = [
-
-];
+const routes: Routes = [];
 
 @NgModule({
   declarations: [
@@ -24,16 +22,16 @@ const routes: Routes = [
     HomeComponent,
     SavedNotesComponent,
     SearchFilterPipe,
-    SignUpComponent
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
-     HttpClientModule,
+    HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

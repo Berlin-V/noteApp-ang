@@ -18,11 +18,11 @@
         <input
           type="text"
           placeholder="Enter the Email ID"
-          formControlName="email"
+          formControlName="userMail"
 	  /> <br />
         <span
           class="text-danger"
-          *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')"
+          *ngIf="loginForm.controls['userMail'].dirty && loginForm.hasError('required','userMail')"
           >*Email ID is Required</span
         >
       </div>

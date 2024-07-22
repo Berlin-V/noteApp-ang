@@ -18,11 +18,11 @@
       <div class="savedNotes">
         <div class="">
           <h1 class="note-title">{{saved.title}}</h1>
-          <p class="note-text">{{saved.body}}</p>
-          <button class="note-btn" (click)="deleteNote(i)">Delete Notes</button>
+          <p class="note-text">{{saved.description}}</p>
+          <button class="note-btn" (click)="deleteNote(saved.task)">Delete Notes</button>
           <button class="note-edit-btn">Edit Notes</button>
           <div class="cat">{{saved.categries}}</div>
-          <div class="date">{{saved.time}}</div>
+	  <div class="date">{{saved.date}} - {{saved.time}}</div>
         </div>
       </div>
     </li>
